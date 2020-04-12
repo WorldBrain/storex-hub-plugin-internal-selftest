@@ -1,0 +1,40 @@
+{
+  "name": "storex-hub-plugin-internal-selftest",
+  "version": "0.0.1",
+  "description": "Plugin used during Storex Hub integration tests",
+  "scripts": {
+    "start": "ts-node ts/main.ts",
+    "prepare": "tsc",
+    "prepare:watch": "npm run prepare -- -w",
+    "test": "mocha --require ts-node/register \"ts/**/*.test.ts\"",
+    "test:watch": "mocha -r source-map-support/register -r ts-node/register \"ts/**/*.test.ts\" --watch --watch-extensions ts",
+    "test:coverage": "rm -rf lib ; yarn prepare && nyc --reporter=html --reporter=text mocha 'lib/**/*.test.js'"
+  },
+  "storexHub": {
+    "identifier": "io.worldbrain.storex-hub.internal.self-test",
+    "version": "0.0.1",
+    "description": "Plugin used during Storex Hub integration tests",
+    "siteUrl": "https://github.com/WorldBrain/storex-hub-plugin-internal-selftest",
+    "apps": [],
+    "mainPath": "ts/plugin",
+    "entryFunction": "main"
+  },
+  "keywords": [],
+  "author": "Vincent den Boer",
+  "dependencies": {
+    "@worldbrain/storex": "^0.4.1",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "@types/expect": "^1.20.4",
+    "@types/lodash": "^4.14.149",
+    "@types/mocha": "^2.2.44",
+    "@types/node": "^10.12.11",
+    "@worldbrain/storex-hub-interfaces": "^0.1.1",
+    "expect": "^23.5.0",
+    "mocha": "^4.0.1",
+    "source-map-support": "0.5.16",
+    "typescript": "^3.8.0",
+    "ts-node": "^8.8.1"
+  }
+}

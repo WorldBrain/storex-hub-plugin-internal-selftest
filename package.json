@@ -1,6 +1,6 @@
 {
   "name": "storex-hub-plugin-internal-selftest",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Plugin used during Storex Hub integration tests",
   "scripts": {
     "start": "ts-node ts/main.ts",
@@ -16,7 +16,7 @@
     "description": "Plugin used during Storex Hub integration tests",
     "siteUrl": "https://github.com/WorldBrain/storex-hub-plugin-internal-selftest",
     "apps": [],
-    "mainPath": "ts/plugin",
+    "mainPath": "lib/plugin",
     "entryFunction": "main"
   },
   "keywords": [],
